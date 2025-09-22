@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradient Themed Webpage</title>
+  <style>
+  
+  /* Home – Sunrise Theme */
+
+  #home {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  }
+
+/* About – Innovation Nexus */
+#about {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Contact – Solar Energy */
+#contact {
+  background: linear-gradient(135deg, #f6d365, #fda085);
+}
+
+/* Doubts – Tropical Inspiration */
+#doubts {
+  background: linear-gradient(135deg, #84fab0, #8fd3f4);
+}
+  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #222;
+      padding: 15px;
+      text-align: center;
+      z-index: 1000;
+    }
+    
+    .h1 {
+      color: orange;
+    }
+    .head {
+      color: #00144f;
+    }
+ 
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ffcc;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 80px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    #home {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    }
+
+    #about {
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    }
+
+    #contact {
+      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+    }
+
+    #doubts {
+      background: linear-gradient(135deg, #84fab0, #8fd3f4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: white;
+    }
+
+    /* Contact Form */
+    form {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+    }
+
+    form input, form button {
+      margin: 10px 0;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    form input {
+      outline: none;
+    }
+
+    form button {
+      background: #222;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background: #00ffcc;
+      color: black;
+    }
+
+    /* About Section Styling */
+    .domains {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .domain {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .domain:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Members hidden by default */
+    .members {
+      margin-top: 15px;
+      display: none;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .members.show {
+      display: grid;
+    }
+
+    .card {
+      background: #ffffffbb;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      color: black;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      margin: 5px 0;
+      color: #222;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #444;
+    }
+  </style>
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <h1 class="h1">Sun-Nexus Solutions</h1>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#doubts">Doubts</a>
+  </nav>
+
+  <!-- Sections -->
+  <section id="home">
+    <h1 class="head">Sun-Nexus Solutions</h1>
+    <p>Explore technology and innovation with us 🚀</p>
+  </section>
+
+  <section id="about">
+    <h1>About Us</h1>
+    <p>We are the <b>Sun-Nexus Solutions</b>, a community of enthusiastic students passionate about technology. 
+       Our mission is to learn, build, and share knowledge in cutting-edge fields.</p>
+    
+    <div class="domains">
+      <!-- AI & ML -->
+      <div class="domain" onclick="toggleMembers('aimlMembers')">
+        🤖 AI & ML
+        <div id="aimlMembers" class="members">
+          <div class="card">
+            <img src="https://via.placeholder.com/100" alt="Member 1">
+            <h3>Bharath Karanam</h3>
+            <p>AI Enthusiast working on deep learning and computer vision projects.</p>
+          </div>
+          <div class="card">
+            <img src="https://via.placeholder.com/100" alt="Member 2">
+            <h3></h3>
+            <p>Researcher in Natural Language Processing, exploring chatbots & AI assistants.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Web Development -->
+      <div class="domain" onclick="toggleMembers('webMembers')">
+        💻 Web Development
+        <div id="webMembers" class="members">
+          <div class="card">
+            <img src="https://via.placeholder.com/100" alt="Member 1">
+            <h3></h3>
+            <p>Frontend Developer building responsive and modern web applications.</p>
+          </div>
+          <div class="card">
+            <img src="https://via.placeholder.com/100" alt="Member 1">
+            <h3></h3>
+            <p>Frontend Developer building responsive and modern web applications.</p>
+          </div>
+          <div class="card">
+            <img src="https://via.placeholder.com/100" alt="Member 1">
+            <h3></h3>
+            <p>Frontend Developer building responsive and modern web applications.</p>
+          </div>
+          <div class="card">
+            <img src="https://via.placeholder.com/100" alt="Member 2">
+            <h3></h3>
+            <p>Full-Stack Developer passionate about scalable backend systems.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cyber Security -->
+      <div class="domain" onclick="toggleMembers('cyberMembers')">
+        🔐 Cyber Security
+        <div id="cyberMembers" class="members">
+          <div class="card">
+            <img src="https://via.placeholder.com/100" alt="Member 1">
+            <h3>Karan Patel</h3>
+            <p>Security Analyst skilled in penetration testing and threat detection.</p>
+          </div>
+          <div class="card">
+            <img src="https://via.placeholder.com/100" alt="Member 2">
+            <h3>Neha Singh</h3>
+            <p>Cyber Security researcher focusing on ethical hacking and network defense.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Analytics -->
+      <div class="domain" onclick="toggleMembers('dataMembers')">
+        📊 Data Analytics
+        <div id="dataMembers" class="members">
+          <div class="card">
+            <img src="https://via.placeholder.com/100" alt="Member 1">
+            <h3>Vikram Nair</h3>
+            <p>Data Analyst working on data visualization and predictive analytics.</p>
+          </div>
+          <div class="card">
+            <img src="https://via.placeholder.com/100" alt="Member 2">
+            <h3>Sanya Kapoor</h3>
+            <p>Data Scientist specializing in statistical modeling and machine learning.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h1>Contact Us</h1>
+    <form>
+      <input type="text" placeholder="Enter your name" required>
+      <input type="number" placeholder="Enter your mobile number" required>
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section id="doubts">
+  <h1>Ask Your Doubts</h1>
+  <p>Have questions? Fill out the form below and our team will help you out!</p>
+
+  <form>
+    <!-- Name -->
+    <input type="text" placeholder="Enter your name" required>
+    <input type="number" placeholder="Enter your mobile number"
+
+    <!-- Year -->
+    <select required>
+      <option value="">Select your year</option>
+      <option value="1st">1st Year</option>
+      <option value="2nd">2nd Year</option>
+      <option value="3rd">3rd Year</option>
+      <option value="4th">4th Year</option>
+    </select>
+      
+      <select required>
+      <option value="">Select your Domain</option>
+      <option value="1st">AIML</option>
+      <option value="2nd">Web Devlopment</option>
+      <option value="3rd">Cyber Security</option>
+      <option value="4th">Data Analyst</option>
+    </select>
+
+    <!-- Gender -->
+    <div style="margin:10px 0; text-align:left; color:white;">
+      <label><input type="radio" name="gender" value="Male" required> Male</label>
+      <label style="margin-left:15px;"><input type="radio" name="gender" value="Female"> Female</label>
+      <label style="margin-left:15px;"><input type="radio" name="gender" value="Other"> Other</label>
+    </div>
+
+    <!-- Doubt -->
+    <textarea placeholder="Write your doubt here (max 400 characters)" maxlength="400" rows="5" required></textarea>
+
+    <!-- Submit -->
+    <button type="submit">Submit Doubt</button>
+  </form>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Sun-Nexus Solutions | All Rights Reserved
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleMembers(id) {
+      const members = document.getElementById(id);
+      members.classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>
